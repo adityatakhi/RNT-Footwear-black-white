@@ -1,0 +1,14 @@
+"use client";
+
+import Link from "next/link";
+import { ArrowLeft, ArrowRight, Minus, Plus } from "lucide-react";
+import { useStore, cartLineKey } from "@/components/store-provider";
+import { formatPrice } from "@/lib/products";
+import { ProductArt } from "@/components/product-art";
+
+export default function CartPage() {
+  const { cart, setQuantity, removeFromCart } = useStore();
+  const subtotal = cart.reduce((sum, line) => sum + line.price * line.quantity, 0);
+  if (!cart.length) return <div className="cart-empty section"><div><div className="eyebrow">YOUR RNT / BAG</div><h1>Nothing here.<br/><span className="serif-italic">Yet.</span></h1><p>Your next favorite form could be waiting in the collection.</p><Link href="/shop" className="button-primary">Explore the collection <ArrowRight size={15}/></Link></div></div>;
+  return <><div className="page-intro"><div className="eyebrow">RNT / YOUR BAG</div><h1>Good choices.</h1><p>{cart.reduce((sum, line) => sum + line.quantity, 0)} piece{cart.reduce((sum, line) => sum + line.quantity, 0) === 1 ? "" : "s"} in your bag.</p></div><div className="section cart-layout"><div><div className="cart-items">{cart.map((line) => { const key = cartLineKey(line); return <article className="cart-line" key={key}><Link href={`/product/${line.slug}`} className="cart-line__image"><ProductArt tone={line.tone} name={line.name}/></Link><div><Link className="cart-line__name" href={`/product/${line.slug}`}>{line.name}</Link><p className="cart-line__details">{line.color}<br/>UK size {line.size}</p><div className="quantity-control" aria-label={`Quantity for ${line.name}`}><button aria-label="Decrease quantity" onClick={() => line.quantity === 1 ? removeFromCart(key) : setQuantity(key, line.quantity - 1)}><Minus size={13}/></button><span>{line.quantity}</span><button aria-label="Increase quantity" onClick={() => setQuantity(key, line.quantity + 1)}><Plus size={13}/></button></div><button className="remove-line" onClick={() => removeFromCart(key)}>Remove</button></div><span className="cart-line__price">{formatPrice(line.price * line.quantity)}</span></article>; })}</div><Link href="/shop" className="text-link" style={{ marginTop: 20 }}><ArrowLeft size={14}/> Continue exploring</Link></div><aside className="order-summary"><h2>Order summary</h2><div className="summary-row"><span>Subtotal</span><span>{formatPrice(subtotal)}</span></div><div className="summary-row"><span>Shipping</span><span>Calculated later</span></div><div className="summary-row"><span>Taxes</span><span>Calculated later</span></div><div className="summary-row summary-row--total"><span>Estimated subtotal</span><span>{formatPrice(subtotal)}</span></div><p className="summary-note">This is a sample storefront. The server must confirm final prices, availability, shipping, and taxes at checkout.</p><Link href="/checkout" className="button-primary summary-checkout">Continue to checkout <ArrowRight size={15}/></Link></aside></div></>;
+}

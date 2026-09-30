@@ -1,0 +1,1 @@
+export default function LoadingPage() { return <div className="section page-skeleton" aria-label="Loading content"><span className="eyebrow">RNT / LOADING</span><div className="skeleton-line skeleton-line--large"/><div className="skeleton-line"/><div className="skeleton-grid"><i/><i/><i/><i/></div></div>; }

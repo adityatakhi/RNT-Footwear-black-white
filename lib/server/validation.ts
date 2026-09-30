@@ -1,0 +1,4 @@
+import { z } from "zod";
+export const loginSchema = z.object({ email: z.email().max(254).transform((value) => value.trim().toLowerCase()), password: z.string().min(10).max(128) });
+export const cartLineSchema = z.object({ productId: z.string().min(1).max(80), variantId: z.string().min(1).max(80), size: z.number().int().min(1).max(16), color: z.string().min(1).max(60), quantity: z.number().int().min(1).max(10) });
+export const checkoutRequestSchema = z.object({ items: z.array(cartLineSchema).min(1).max(30), email: z.email().max(254), shippingAddress: z.object({ name: z.string().min(1).max(120), line1: z.string().min(1).max(200), line2: z.string().max(200).optional(), city: z.string().min(1).max(100), region: z.string().min(1).max(100), postalCode: z.string().min(3).max(16), country: z.string().length(2) }) });
