@@ -72,7 +72,7 @@ export const products: Product[] = [
     id: "rnt-aerospace-7-white-navy", slug: "aerospace-7-white-navy-blue", name: "Aerospace 7",
     subtitle: "White and navy blue · Style ka naya roll number", category: "Road", price: 689, priceLabel: "MRP",
     colorway: "White / Navy Blue", tone: "slate", swatches: [{ name: "White / Navy Blue", tone: "slate" }],
-    sizes: [], tag: "AEROSPACE 7", description: "The white and navy blue Aerospace 7 shown in the supplied RNT campaign artwork.",
+    sizes: [6, 7, 8, 9, 10, 11], tag: "AEROSPACE 7", description: "The white and navy blue Aerospace 7 shown in the supplied RNT campaign artwork.",
     details: ["Urban style", "Uncompromising durability", "MRP ₹689, as shown in the artwork"],
     images: [userArtwork("aerospace-7-white-navy")], imageFit: "contain",
     seoTitle: "RNT Aerospace 7 White Navy Blue Sports Shoes", seoDescription: "RNT Aerospace 7 in white and navy blue. MRP ₹689 as shown in the supplied RNT artwork.", placeholder: false
@@ -81,7 +81,7 @@ export const products: Product[] = [
     id: "rnt-aerospace-1-grey-pista", slug: "aerospace-1-grey-pista", name: "Aerospace 1",
     subtitle: "Grey pista · Tech-inspired comfort", category: "Everyday", price: 689, priceLabel: "Special price",
     colorway: "Grey Pista", tone: "chalk", swatches: [{ name: "Grey Pista", tone: "chalk" }],
-    sizes: [], tag: "GREY PISTA", description: "The Aerospace 1 in Grey Pista, shown in the supplied RNT campaign artwork.",
+    sizes: [6, 7, 8, 9, 10, 11], tag: "GREY PISTA", description: "The Aerospace 1 in Grey Pista, shown in the supplied RNT campaign artwork.",
     details: ["Grey Pista colorway", "Special price ₹689, as shown in the artwork"],
     images: [userArtwork("aerospace-1-grey-pista")], imageFit: "contain",
     seoTitle: "RNT Aerospace 1 Grey Pista Sports Shoes", seoDescription: "RNT Aerospace 1 in Grey Pista. Special price ₹689 as shown in the supplied RNT artwork.", placeholder: false
@@ -90,7 +90,7 @@ export const products: Product[] = [
     id: "rnt-aerospace-1-bk", slug: "aerospace-1-bk", name: "Aerospace 1 BK",
     subtitle: "Black and olive · Ergo-fit design", category: "Road", price: 689, priceLabel: "MRP",
     colorway: "Black / Olive", tone: "slate", swatches: [{ name: "Black / Olive", tone: "slate" }],
-    sizes: [], tag: "AEROSPACE 1 BK", description: "Aerospace 1 BK as shown in the supplied black and olive RNT campaign artwork.",
+    sizes: [6, 7, 8, 9, 10, 11], tag: "AEROSPACE 1 BK", description: "Aerospace 1 BK as shown in the supplied black and olive RNT campaign artwork.",
     details: ["Ergo-fit design", "Multi-grip sole", "Breathable mesh", "MRP ₹689, as shown in the artwork"],
     images: [userArtwork("aerospace-1-bk")], imageFit: "contain",
     seoTitle: "RNT Aerospace 1 BK Black Olive Sports Shoes", seoDescription: "RNT Aerospace 1 BK in black and olive. MRP ₹689 as shown in the supplied RNT artwork.", placeholder: false
@@ -99,7 +99,7 @@ export const products: Product[] = [
     id: "rnt-stryder-3-black-black", slug: "stryder-3-black-black", name: "Stryder 3",
     subtitle: "Black on black · Sports style", category: "Everyday", price: 712, priceLabel: "MRP",
     colorway: "Black / Black", tone: "slate", swatches: [{ name: "Black / Black", tone: "slate" }],
-    sizes: [], tag: "STRYDER 3", description: "Stryder 3 in Black / Black, as shown in the supplied RNT artwork.",
+    sizes: [6, 7, 8, 9, 10, 11], tag: "STRYDER 3", description: "Stryder 3 in Black / Black, as shown in the supplied RNT artwork.",
     details: ["Black / Black colorway", "MRP ₹712, as shown in the artwork"],
     images: [userArtwork("stryder-3-black-black")], imageFit: "contain",
     seoTitle: "RNT Stryder 3 Black Sports Shoes", seoDescription: "RNT Stryder 3 in Black / Black. MRP ₹712 as shown in the supplied RNT artwork.", placeholder: false
